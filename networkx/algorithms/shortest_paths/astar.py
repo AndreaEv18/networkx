@@ -116,6 +116,7 @@ def astar_path(G, source, target, heuristic=None, weight='weight'):
             ncost = dist + weight(curnode, neighbor, w)
             if neighbor in enqueued:
                 qcost, h = enqueued[neighbor]
+                
                 # if qcost <= ncost, a less costly path from the
                 # neighbor to the source was already determined.
                 # Therefore, we won't attempt to push this neighbor
